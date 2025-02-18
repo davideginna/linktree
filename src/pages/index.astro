@@ -32,11 +32,13 @@ import '@/style.css'
             <h2>GDG Pisa: Tech Community</h2>
             <div class="social">
                 {
-                    data.social.map(({ title, icon, url }) => (
-                        <a href={url} target="_blank" rel="noopener noreferrer" title={title}>
-                            <Icon name={icon} />
-                        </a>
-                    ))
+                    data.social
+                        .filter(item => item.visible)
+                        .map(({ title, icon, url }) => (
+                            <a href={url} target="_blank" rel="noopener noreferrer" title={title}>
+                                <Icon name={icon} />
+                            </a>
+                        ))
                 }
             </div>
         </div>
@@ -44,19 +46,24 @@ import '@/style.css'
         <LatestEventLink client:load />
 
         {
-            data.sections.map(section => (
-                <>
-                    <h3>{section.title}</h3>
-                    <div class="links">
-                        {section.links.map(({ title, icon, url }) => (
-                            <a href={url} class="large">
-                                <Icon name={icon} />
-                                <div class="fill center">{title}</div>
-                            </a>
-                        ))}
-                    </div>
-                </>
-            ))
+            data.sections.map(section => {
+                const visibleLinks = section.links.filter(link => link.visible);
+                
+                // Solo se ci sono link visibili, mostra la sezione
+                return visibleLinks.length > 0 && (
+                    <>
+                        {section.title && <h3>{section.title}</h3>}
+                        <div class="links">
+                            {visibleLinks.map(({ title, icon, url }) => (
+                                <a href={url} class="large">
+                                    <Icon name={icon} />
+                                    <div class="fill center">{title}</div>
+                                </a>
+                            ))}
+                        </div>
+                    </>
+                )
+            })
         }
     </body>
 </html>
