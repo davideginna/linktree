@@ -24,7 +24,24 @@ social:
     icon: 'mdi:youtube'
     url: 'https://www.youtube.com/@gdgpisa4445'
 
+
 sections:
+  - title: DevFest Pisa 2025
+    links:
+      - title: DevFest Website
+        icon: material-symbols:festival-rounded
+        url: https://devfest.gdgpisa.it/
+      - title: IWD Website
+        icon: material-symbols:festival-rounded
+        url: https://devfest.gdgpisa.it/iwd/
+        
+      - title: Call for Speakers
+        icon: material-symbols:volume-up-rounded
+        url: https://sessionize.com/dfp25/?e=a1a46b
+      - title: Partnership Proposal
+        icon: material-symbols:handshake-rounded
+        url: https://docs.google.com/document/d/1JM9FV4-M9Qf6stJguMMlRU70RhOqIdQapd9G7FKP38A/edit?usp=sharing
+
   - links:
       - title: GDG Pisa, Modulo prenotazione aule
         icon: material-symbols:checkbook
@@ -40,14 +57,3 @@ sections:
       - title: Upcoming events on GDG Community
         icon: material-symbols:calendar-today
         url: https://gdg.community.dev/gdg-pisa
-  - title: DevFest Pisa 2025
-    links:
-      - title: DevFest Website
-        icon: material-symbols:festival-rounded
-        url: https://devfest.gdgpisa.it/
-      - title: Call for Speakers
-        icon: material-symbols:volume-up-rounded
-        url: https://sessionize.com/dfp25/?e=a1a46b
-      - title: Partnership Proposal
-        icon: material-symbols:handshake-rounded
-        url: https://docs.google.com/document/d/1JM9FV4-M9Qf6stJguMMlRU70RhOqIdQapd9G7FKP38A/edit?usp=sharing
